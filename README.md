@@ -9,4 +9,5 @@ add python install path to Path environment variable in Windows
 ```markdown
 https://docs.python.org/zh-cn/3/tutorial/introduction.html
 3.1.2 Reference
+https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#strings
 ```
