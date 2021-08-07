@@ -9,6 +9,6 @@ add python install path to Path environment variable in Windows
 ```markdown
 https://docs.python.org/zh-cn/3/tutorial/introduction.html
 3.1.2 Reference
-https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#strings
-字符串的方法 => str.count(sub[, start[, end]])
+https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods
+字符串的方法 => format_map(mapping)
 ```
