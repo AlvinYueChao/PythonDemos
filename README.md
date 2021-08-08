@@ -11,6 +11,9 @@ https://docs.python.org/zh-cn/3/tutorial/introduction.html
 3.1.2 Reference
 https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods
 字符串的方法 => format_map(mapping)
+
+https://www.runoob.com/python3/python3-data-type.html
+List (列表)
 ```
 
 ## 遗留问题
