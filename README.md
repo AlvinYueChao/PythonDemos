@@ -12,3 +12,10 @@ https://docs.python.org/zh-cn/3/tutorial/introduction.html
 https://docs.python.org/zh-cn/3/library/stdtypes.html#string-methods
 字符串的方法 => format_map(mapping)
 ```
+
+## 遗留问题
+```markdown
+1.假如变量名为Python保留关键字，如何进行转义
+sample:
+'{class}班{name}总分: {score}'.format_map(class='20210808', name='小明', score=597.5) 没有输出结果...
+```
