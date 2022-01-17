@@ -58,7 +58,23 @@ def test_sort():
     power_tools.sort(key=lambda x: x.name, reverse=True)
     print(power_tools)
 
+
+def populate_ranks(votes, ranks):
+    names = list(votes.keys())
+    names.sort(key=votes.get, reverse=True)
+    for i, name in enumerate(names, 1):
+        ranks[name] = i
+
+
 if __name__ == '__main__':
     # test_parse_qs()
     # test_zip()
-    test_sort()
+    # test_sort()
+    votes = {
+        'otter': 1281,
+        'polar bear': 587,
+        'fox': 863
+    }
+    ranks = {}
+    populate_ranks(votes, ranks)
+    print(ranks)
