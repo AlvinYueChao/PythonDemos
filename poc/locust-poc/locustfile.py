@@ -1,6 +1,6 @@
 import time
-from locust import HttpUser, task, between
-
+from locust import HttpUser, task, between, User
+from loguru import logger
 
 class QuickstartUser(HttpUser):
     wait_time = between(1, 5)
@@ -18,3 +18,26 @@ class QuickstartUser(HttpUser):
 
     def on_start(self):
         self.client.post("/login", json={"username": "foo", "password": "bar"})
+
+
+class CustomUser(User):
+    wait_time = between(1, 5)
+
+    def __init__(self, environment):
+        super().__init__(environment)
+        self.init_var = None
+
+    @task
+    def task1(self):
+        logger.info("=== invoke task1, value of init_var: {} ===", self.init_var)
+
+    @task
+    def task2(self):
+        logger.info("=== invoke task2, value of init_var: {} ===", self.init_var)
+
+    def on_start(self):
+        logger.info("=== on start... ===")
+        self.init_var = "initialized value"
+
+    def on_stop(self):
+        logger.info("=== on stop... ===")
