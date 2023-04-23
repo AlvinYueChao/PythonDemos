@@ -8,7 +8,6 @@ def teacher_selection():
     max_num_of_students = math.ceil(len(students) / len(teachers))
     min_num_of_students = math.floor(len(students) / len(teachers))
     invalid_choices = {}
-
     # 每个同学的老师选择列表
     student_prefs = {
         0: [0, 1, 2],
