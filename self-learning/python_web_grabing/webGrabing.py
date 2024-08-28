@@ -12,6 +12,7 @@ def grab_tags():
     soup = bs4.BeautifulSoup(res.content, "lxml")
     # grab the authors
     author_tags = soup.select(".author")
+    
     authors = set()
     for tag in author_tags:
         authors.add(tag.text)
